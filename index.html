@@ -12,21 +12,16 @@
 
     <body>
 
+        <h1 class="mainHeading">Hello, and welcome to the Holiday Helper chatbot</h1>
 
-        <form id="user-form" class="">
-            <label for="name-input">Name:</label>
+        <div id="name-container" class="title">
+            <label for="name-input">Please enter your name:</label>
             <input id="name-input" type="text">
-            <br>
-            <label for="age-input">Age:</label>
-            <input id="age-input" type="text">
-            <br>
-            <label for="location-input">Location:</label>
-            <input id="location-input" type="text">
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+            <button id="submit-button" type="submit">Submit</button>
+        </div>
+        <p id="validated-name" class="hidden title"></p>
 
-        <div class="hidden">
+        <div id="hidden-element" class="hiddenElement">
             <h2 class="title">What continent were you thinking??</h2>
             <div class="btn-wrapper">
                 <button id="button1" class="btn">Europe</button>
@@ -40,9 +35,9 @@
                 <button id="button6" class="btn">Lazy</button>
             </div>
             <!-- <h2>What kind of weather are you looking for?</h2>
-        <button id="button6">Cold</button>
-        <button id="button7">Mild</button>
-        <button id="button8">Hot</button> -->
+            <button id="button6">Cold</button>
+            <button id="button7">Mild</button>
+            <button id="button8">Hot</button> -->
             <h2 class="title">Find my dream holiday!</h2>
             <div class="btn-wrapper">
                 <button id="button9" class="btn">Show my results!</button>

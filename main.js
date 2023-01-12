@@ -73,46 +73,26 @@ const data = [
       }
 ];
 
-const userForm = document.getElementById("user-form");
-const elements = document.querySelectorAll(".hidden");
+const nameContainer = document.getElementById("name-container");
+const nameInput = document.getElementById("name-input");
+const submitButton = document.getElementById("submit-button");
+const validatedName = document.getElementById("validated-name");
 
-function validateName(name) {
-  const regex = /^[a-zA-Z]+$/;
-  if(regex.test(name)) {
-    return true;
-  }
-  return false;
-}
-
-function validateAge(age) {
-  const regex = /^\d+$/;
-  if(regex.test(age)) {
-    return true;
-  }
-  return false;
-}
-
-userForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  const name = document.getElementById("name-input").value;
-  const age = document.getElementById("age-input").value;
-  if (validateName(name) && validateAge(age)) {
-    elements.forEach(element => {
-      element.classList.remove("hidden");
-    });
-    userForm.classList.add("hidden");
+submitButton.addEventListener("click", function() {
+  const name = nameInput.value;
+  if(validateName(name)) {
+    validatedName.innerHTML = `Hello, ${name}!`;
+    validatedName.classList.remove("hidden");
+    nameContainer.remove();
   } else {
-    alert("Please enter a valid name without numbers and age without letters");
+    // Show an error message
   }
 });
 
-
-// let data = [
-//     { id: 1, name: "John", age: 28 },
-//     { id: 2, name: "Mary", age: 33 },
-//     { id: 3, name: "Mike", age: 41 },
-//     { id: 4, name: "Sarah", age: 18 }
-// ];
+function validateName(name) {
+  const regex = /^[a-zA-Z]+$/;
+  return regex.test(name);
+}
 
 let filteredData = [];
 let filteredDataTwo = [];

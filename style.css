@@ -4,7 +4,55 @@ body {
 
 }
 
+.mainHeading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #333333;
+  text-shadow: 2px 2px 4px #cccccc;
+  margin: 1rem 0;
+  text-transform: uppercase; /* make the text uppercase */
+  font-weight: bold; /* make the text bold */
+}
+
+input[type="text"] {
+  padding: 0.5em;
+  font-size: 0.6em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px #cccccc;
+  margin: 0.5em 0;
+}
+
+input[type="text"]:focus {
+  border: 2px solid blue;
+}
+
+/* Add a green border when the input is hovered */
+input[type="text"]:hover {
+  border: 2px solid green;
+}
+
 .hidden {
+  visibility: hidden;
+}
+
+.fade-in{
+  animation: fadeIn 1s;
+}
+.fade-out{
+  animation: fadeOut 1s;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.hiddenOld {
   display: none;
 }
 
