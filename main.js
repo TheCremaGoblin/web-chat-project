@@ -73,6 +73,40 @@ const data = [
       }
 ];
 
+const userForm = document.getElementById("user-form");
+const elements = document.querySelectorAll(".hidden");
+
+function validateName(name) {
+  const regex = /^[a-zA-Z]+$/;
+  if(regex.test(name)) {
+    return true;
+  }
+  return false;
+}
+
+function validateAge(age) {
+  const regex = /^\d+$/;
+  if(regex.test(age)) {
+    return true;
+  }
+  return false;
+}
+
+userForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const name = document.getElementById("name-input").value;
+  const age = document.getElementById("age-input").value;
+  if (validateName(name) && validateAge(age)) {
+    elements.forEach(element => {
+      element.classList.remove("hidden");
+    });
+    userForm.classList.add("hidden");
+  } else {
+    alert("Please enter a valid name without numbers and age without letters");
+  }
+});
+
+
 // let data = [
 //     { id: 1, name: "John", age: 28 },
 //     { id: 2, name: "Mary", age: 33 },
@@ -83,10 +117,12 @@ const data = [
 let filteredData = [];
 let filteredDataTwo = [];
 
+
 // Create the "Filter" button and add an event listener to it
 const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    button1.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "Europe";
     });
@@ -95,6 +131,7 @@ button1.addEventListener("click", function() {
 const button2 = document.getElementById("button2");
 button2.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    button2.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "North America";
     });
@@ -103,6 +140,7 @@ button2.addEventListener("click", function() {
 const button3 = document.getElementById("button3");
 button3.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    button3.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "Asia";
     });
@@ -111,6 +149,7 @@ button3.addEventListener("click", function() {
 const button4 = document.getElementById("button4");
 button4.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    button4.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "Africa";
     });
@@ -119,6 +158,7 @@ button4.addEventListener("click", function() {
 const button5 = document.getElementById("button5");
 button5.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    button5.classList.add("green");
     filteredDataTwo = data.filter(function(item) {
         return item.Category === "active";
     });
@@ -127,6 +167,7 @@ button5.addEventListener("click", function() {
 const button6 = document.getElementById("button6");
 button6.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    button6.classList.add("green");
     filteredDataTwo = data.filter(function(item) {
         return item.Category === "lazy";
     });
@@ -136,10 +177,13 @@ button6.addEventListener("click", function() {
 const button9 = document.getElementById("button9");
 button9.addEventListener("click", function() {
     // Loop through the filtered data and display it
+    button9.classList.add("green");
     let mergedArray = [...new Set([...filteredData, ...filteredDataTwo])];
     console.log(mergedArray);
 
     let htmlString = "";
+
+
 
   // Iterate through the array of objects
   for (let i = 0; i < mergedArray.length; i++) {
