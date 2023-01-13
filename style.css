@@ -113,3 +113,12 @@ input[type="text"]:hover {
     display: inline-block;
     text-align: center;
 }
+
+ul {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #333333;
+  text-align: center; /* align the text to the center */
+  list-style-type: none; /* remove the marker style */
+}

@@ -1,75 +1,234 @@
 const data = [
     {
-        "HolidayReference": 1,
-        "HotelName": "Uptown",
+        "Hotel Name": "Uptown",
         "City": "Bali",
         "Continent": "Asia",
         "Country": "Indonesia",
         "Category": "active",
-        "StarRating": 3,
-        "TempRating": "mild",
+        "Star Rating": 3,
+        "Temperature": "mild",
         "Location": "mountain",
-        "PricePerPerNight": `£120`
+        "PPPN": 120
       },
-      {
-        "HolidayReference": 2,
-        "HotelName": "Relaxamax",
+      {   
+        "Hotel Name": "Relaxamax",
         "City": "New Orleans",
         "Continent": "North America",
         "Country": "USA",
         "Category": "lazy",
-        "StarRating": 4,
-        "TempRating": "mild",
+        "Star Rating": 4,
+        "Temperature": "mild",
         "Location": "city",
-        "PricePerPerNight": 28
+        "PPPN": 28
       },
       {
-        "HolidayReference": 3,
-        "HotelName": "WindyBeach",
+        "Hotel Name": "WindyBeach",
         "City": "Ventry",
         "Continent": "Europe",
         "Country": "Ireland",
         "Category": "active",
-        "StarRating": 3,
-        "TempRating": "mild",
+        "Star Rating": 3,
+        "Temperature": "mild",
         "Location": "sea",
-        "PricePerPerNight": 42
+        "PPPN": 42
       },
       {
-        "HolidayReference": 4,
-        "HotelName": "Twighlight",
+        "Hotel Name": "Twighlight",
         "City": "Marrakech",
         "Continent": "Africa",
         "Country": "Morocco",
         "Category": "lazy",
-        "StarRating": 5,
-        "TempRating": "cold",
+        "Star Rating": 5,
+        "Temperature": "cold",
         "Location": "mountain",
-        "PricePerPerNight": 50
+        "PPPN": 50
       },
       {
-        "HolidayReference": 5,
-        "HotelName": "TooHot",
+        "Hotel Name": "TooHot",
         "City": "Sydney",
         "Continent": "Australia",
         "Country": "Australia",
         "Category": "lazy",
-        "StarRating": 5,
-        "TempRating": "hot",
+        "Star Rating": 5,
+        "Temperature": "warm",
         "Location": "sea",
-        "PricePerPerNight": 67
+        "PPPN": 67
       },
       {
-        "HolidayReference": 6,
-        "HotelName": "Castaway",
+        "Hotel Name": "Castaway",
         "City": "",
         "Continent": "Africa",
         "Country": "The Maldives",
         "Category": "lazy",
-        "StarRating": 3,
-        "TempRating": "mild",
+        "Star Rating": 3,
+        "Temperature": "mild",
         "Location": "sea",
-        "PricePerPerNight": 120
+        "PPPN": 120
+      },
+      {
+        "Hotel Name": "Eiffel Park",
+        "City": "Paris",
+        "Continent": "Europe",
+        "Country": "France",
+        "Category": "active",
+        "Star Rating": 4,
+        "Temperature": "mild",
+        "Location": "city",
+        "PPPN": 45
+      },
+      {
+        "Hotel Name": "The Cape",
+        "City": "Cape Town",
+        "Continent": "Africa",
+        "Country": "South Africa",
+        "Category": "active",
+        "Star Rating": 4,
+        "Temperature": "mild",
+        "Location": "sea",
+        "PPPN": 78
+      },
+      {
+        "Hotel Name": "Desert Dreams",
+        "City": "Dubai",
+        "Continent": "Asia",
+        "Country": "U.A.E",
+        "Category": "active",
+        "Star Rating": 4,
+        "Temperature": "warm",
+        "Location": "mountain",
+        "PPPN": 67
+      },
+      {
+        "Hotel Name": "SeaViews",
+        "City": "Bora Bora",
+        "Continent": "Australia",
+        "Country": "French Polynesia",
+        "Category": "active",
+        "StarRating": 3,
+        "Temperature": "mild",
+        "Location": "sea",
+        "PPPN": 54
+      },
+      {
+        "Hotel Name": "AppleCity",
+        "City": "New York",
+        "Continent": "North America",
+        "Country": "USA",
+        "Category": "active",
+        "Star Rating": 3,
+        "Temperature": "mild",
+        "Location": "city",
+        "PPPN": 27
+      },
+      {
+        "Hotel Name": "IslandHopper",
+        "City": "Dubrovnik",
+        "Continent": "Europe",
+        "Country": "Croatia",
+        "Category": "active",
+        "StarRating": 5,
+        "Temperature": "mild",
+        "Location": "sea",
+        "PPPN": 78
+      },
+      {
+        "Hotel Name": "CastleTown",
+        "City": "Edinburgh",
+        "Continent": "Europe",
+        "Country": "Scotland",
+        "Category": "lazy",
+        "StarRating": 3,
+        "Temperature": "mild",
+        "Location": "city",
+        "PPPN": 53
+      },
+      {
+        "Hotel Name": "WineValley",
+        "City": "Rome",
+        "Continent": "Europe",
+        "Country": "Italy",
+        "Category": "lazy",
+        "Star Rating": 5,
+        "Temperature": "mild",
+        "Location": "city",
+        "PPPN": 25
+      },
+      {
+        "Hotel Name": "WearyTraveller",
+        "City": "Paro Valley",
+        "Continent": "Asia",
+        "Country": "Bhutan",
+        "Category": "active",
+        "Star Rating": 5,
+        "Temperature": "mild",
+        "Location": "mountain",
+        "PPPN": 54
+      },
+      {
+        "Hotel Name": "HotTimes",
+        "City": "Jaipur",
+        "Continent": "Asia",
+        "Country": "India",
+        "Category": "lazy",
+        "Star Rating": 4,
+        "Temperature": "warm",
+        "Location": "sea",
+        "PPPN": 67
+      },
+      {
+        "Hotel Name": "ForestRetreat",
+        "City": "Waikato",
+        "Continent": "Australia",
+        "Country": "New Zealand",
+        "Category": "active",
+        "Star Rating": 4,
+        "Temperature": "mild",
+        "Location": "mountain",
+        "PPPN": 89
+      },
+      {
+        "Hotel Name": "Casablanca",
+        "City": "Havana",
+        "Continent": "North America",
+        "Country": "Cuba",
+        "Category": "lazy",
+        "Star Rating": 5,
+        "Temperature": "mild",
+        "Location": "city",
+        "PPPN": 29
+      },
+      {
+        "Hotel Name": "TechCity",
+        "City": "Tokyo",
+        "Continent": "Asia",
+        "Country": "Japan",
+        "Category": "active",
+        "Star Rating": 3,
+        "Temperature": "mild",
+        "Location": "city",
+        "PPPN": 71
+      },
+      {
+        "Hotel Name": "IceHotel",
+        "City": "Base Marambio",
+        "Continent": "Antarctica",
+        "Country": "Antartica",
+        "Category": "active",
+        "Star Rating": 5,
+        "Temperature": "cold",
+        "Location": "mountain",
+        "PPPN": 270
+      },
+      {
+        "Hotel Name": "NorthStar",
+        "City": "",
+        "Continent": "Arctic",
+        "Country": "Greenland",
+        "Category": "active",
+        "Star Rating": 5,
+        "Temperature": "cold",
+        "Location": "mountain",
+        "PPPN": 250
       }
 ];
 
@@ -81,11 +240,12 @@ const validatedName = document.getElementById("validated-name");
 submitButton.addEventListener("click", function() {
   const name = nameInput.value;
   if(validateName(name)) {
-    validatedName.innerHTML = `Hello, ${name}!`;
+    validatedName.innerHTML = `Hello, ${name}, it's nice to meet you!`;
     validatedName.classList.remove("hidden");
     nameContainer.remove();
   } else {
-    // Show an error message
+    alert("Please enter an appropriate user name")
+
   }
 });
 
@@ -96,6 +256,8 @@ function validateName(name) {
 
 let filteredData = [];
 let filteredDataTwo = [];
+let filteredDataThree = [];
+let filteredDataFour = [];
 
 
 // Create the "Filter" button and add an event listener to it
@@ -139,7 +301,7 @@ const button5 = document.getElementById("button5");
 button5.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
     button5.classList.add("green");
-    filteredDataTwo = data.filter(function(item) {
+    filteredDataTwo = filteredData.filter(function(item) {
         return item.Category === "active";
     });
 });
@@ -148,22 +310,74 @@ const button6 = document.getElementById("button6");
 button6.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
     button6.classList.add("green");
-    filteredDataTwo = data.filter(function(item) {
+    filteredDataTwo = filteredData.filter(function(item) {
         return item.Category === "lazy";
     });
 });
 
-// Create the "Display" button and add an event listener to it
+const button7 = document.getElementById("button7");
+button7.addEventListener("click", function() {
+    // Filter the data and store it in the "filteredData" variable
+    button7.classList.add("green");
+    filteredDataThree = filteredDataTwo.filter(function(item) {
+        return item.Temperature === "cold" || item.Temperature === "mild";
+    });
+});
+
 const button9 = document.getElementById("button9");
 button9.addEventListener("click", function() {
-    // Loop through the filtered data and display it
+    // Filter the data and store it in the "filteredData" variable
     button9.classList.add("green");
-    let mergedArray = [...new Set([...filteredData, ...filteredDataTwo])];
+    filteredDataThree = filteredDataTwo.filter(function(item) {
+        return item.Temperature === "warm";
+    });
+});
+
+const button10 = document.getElementById("button10");
+button10.addEventListener("click", function() {
+    // Filter the data and store it in the "filteredData" variable
+    button10.classList.add("green");
+    filteredDataFour = filteredDataThree.filter(function(item) {
+        return item.PPPN <= 70;
+    });
+});
+
+const button11 = document.getElementById("button11");
+button11.addEventListener("click", function() {
+    // Filter the data and store it in the "filteredData" variable
+    button11.classList.add("green");
+    filteredDataFour = filteredDataThree.filter(function(item) {
+        return item.PPPN > 71 && item.PPPN < 150;
+    });
+});
+
+const button12 = document.getElementById("button12");
+button12.addEventListener("click", function() {
+    // Filter the data and store it in the "filteredData" variable
+    button12.classList.add("green");
+    filteredDataFour = filteredDataThree.filter(function(item) {
+        return item.PPPN > 151;
+    });
+});
+
+// filter all x holidays into filteredData
+//second button - grab filteredData and filter all Y holidays
+//third button - grab FilteredData and filter all the cold holidays
+
+
+// Create the "Display" button and add an event listener to it
+const button13 = document.getElementById("button13");
+button13.addEventListener("click", function() {
+    // Loop through the filtered data and display it
+    button13.classList.add("green");
+    let mergedArray =  [...filteredDataFour]  //[...new Set([...filteredData, ...filteredDataTwo, ...filteredDataThree, ...filteredDataFour])];
+    if (mergedArray.length === 0){
+      alert("No holidays found, please search again!")
+      location.reload();
+    }
     console.log(mergedArray);
 
     let htmlString = "";
-
-
 
   // Iterate through the array of objects
   for (let i = 0; i < mergedArray.length; i++) {
@@ -171,7 +385,7 @@ button9.addEventListener("click", function() {
     const obj = mergedArray[i];
 
     // Add a heading for the current object
-    htmlString += "<h3>Holiday " + (i+1) + '!'+ "</h3>";
+    // htmlString += "<h3>Holiday " + (i+1) + '!'+ "</h3>";
     // Add an unordered list for the object's properties
     htmlString += "<ul>";
 
@@ -312,7 +526,7 @@ button9.addEventListener("click", function() {
 // //     data.filter((ele, ind) => {
 // //         console.log(ele);
 // //         const li = document.createElement('li');
-// //         li.textContent = `${ind + 1}. ${ele.TempRating === "hot"}`;
+// //         li.textContent = `${ind + 1}. ${ele.TempRating === "warm"}`;
 // //         ul.append(li)
 // //     })
 // // }
