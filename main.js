@@ -263,7 +263,6 @@ let filteredDataFour = [];
 let prevButtonsClicked = 0;
 
 
-// Create the "Filter" button and add an event listener to it
 const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
@@ -429,20 +428,11 @@ button12.addEventListener("click", function() {
     });
 });
 
-// filter all x holidays into filteredData
-//second button - grab filteredData and filter all Y holidays
-//third button - grab FilteredData and filter all the cold holidays
-
-
-// Create the "Display" button and add an event listener to it
-
-
-
 const button13 = document.getElementById("button13");
 button13.addEventListener("click", function() {
     checkPrevButtons()
     button13.classList.add("green");
-    let mergedArray =  [...filteredDataFour]  //[...new Set([...filteredData, ...filteredDataTwo, ...filteredDataThree, ...filteredDataFour])];
+    let mergedArray =  [...filteredDataFour] 
     if (mergedArray.length === 0){
       alert("No holidays found, please search again!")
       location.reload();
@@ -456,9 +446,6 @@ button13.addEventListener("click", function() {
     // Get the current object
     const obj = mergedArray[i];
 
-    // Add a heading for the current object
-    // htmlString += "<h3>Holiday " + (i+1) + '!'+ "</h3>";
-    // Add an unordered list for the object's properties
     htmlString += "<ul>";
 
     // Iterate through the object's properties
@@ -478,142 +465,14 @@ button13.addEventListener("click", function() {
   container.innerHTML = htmlString;
 });
 
+const button14 = document.getElementById("button14")
+button14.addEventListener("click", function() {
+  location.reload();
+})
+
 function checkPrevButtons() {
   if (prevButtonsClicked === 4) {
     button13.removeAttribute("disabled");
     button13.classList.remove("greyed-out");
   }
 }
-
-// const button10 = document.getElementById("button10");
-// button10.addEventListener("click", function() {
-//     // Loop through the filtered data and display it
-//     filteredDataTwo.forEach(function(item) {
-//         console.log(item)
-//     })
-// });
-
-
-//instead of displaying each button click - store the value in a variable
-//the final function displayData can then display variable 1, 2 and 3 together?
-//by taking away the displayData call in each button, you are no longer displaying each result as you click it
-//the final function needs a button, when clicked, displays each variable
-
-// const button1 = document.getElementById("button1");
-// button1.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.Continent === 'Europe');
-//     // displayData(filteredData);
-// });
-
-// const button2 = document.getElementById("button2");
-// button2.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.Continent === 'North America');
-//     // displayData(filteredData);
-// });
-
-// const button3 = document.getElementById("button3");
-// button3.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.Continent === 'Asia');
-//     // displayData(filteredData);
-// });
-
-// const button4 = document.getElementById("button4");
-// button4.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.Category === 'active');
-//     displayData(filteredData);
-// });
-
-// const button5 = document.getElementById("button5");
-// button5.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.Category === 'lazy');
-//     displayData(filteredData);
-// });
-
-// const button6 = document.getElementById("button6");
-// button6.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.TempRating === 'cold');
-//     displayData(filteredData);
-// });
-
-// const button7 = document.getElementById("button7");
-// button7.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.TempRating === 'mild');
-//     displayData(filteredData);
-// });
-
-// const button8 = document.getElementById("button8");
-// button8.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.TempRating === 'hot');
-//     displayData(filteredData);
-// });
-
-// const button9 = document.getElementById("button9");
-// button8.addEventListener("click", () => {
-//     const filteredData = data.filter(item => item.TempRating === 'hot');
-//     displayData(filteredData);
-// });
-
-// function displayData(data) {
-//     const output = document.getElementById("output");
-//     output.innerHTML = JSON.stringify(data);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const btn = document.querySelector('#btn')
-// const main = document.querySelector('.container')
-// const url = 'data.json'
-
-// btn.addEventListener('click', holidayGrab);
-
-// function holidayGrab(){
-//     fetch(url)
-//     .then(res => res.json())
-//     .then(data => filteredHolidays(data))
-//     .catch((error) => {
-//         console.error(error);
-//     })
-// }
-
-// // function adder(data){
-// //     const ul = document.createElement('ul')
-// //     main.append(ul)
-// //     data.filter((ele, ind) => {
-// //         console.log(ele);
-// //         const li = document.createElement('li');
-// //         li.textContent = `${ind + 1}. ${ele.TempRating === "warm"}`;
-// //         ul.append(li)
-// //     })
-// // }
-
-// const filteredHolidays = data.filter(holiday => holiday.TempRating === 'hot');
-// for (holiday of filteredHolidays) {
-//     const ul = document.createElement('ul')
-//     main.append(ul)
-//     const li = document.createElement('li');
-//     ul.append(li)
-// }
