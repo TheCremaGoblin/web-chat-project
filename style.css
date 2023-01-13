@@ -33,6 +33,10 @@ input[type="text"]:hover {
   border: 2px solid green;
 }
 
+.hiddenElement {
+  visibility: hidden;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -72,6 +76,10 @@ input[type="text"]:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+}
+
+.greyed-out {
+  opacity: 0.5;
 }
 
 .btn {

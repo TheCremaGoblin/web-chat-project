@@ -236,6 +236,7 @@ const nameContainer = document.getElementById("name-container");
 const nameInput = document.getElementById("name-input");
 const submitButton = document.getElementById("submit-button");
 const validatedName = document.getElementById("validated-name");
+const hiddenElements = document.getElementById("hidden-element")
 
 submitButton.addEventListener("click", function() {
   const name = nameInput.value;
@@ -243,6 +244,7 @@ submitButton.addEventListener("click", function() {
     validatedName.innerHTML = `Hello, ${name}, it's nice to meet you!`;
     validatedName.classList.remove("hidden");
     nameContainer.remove();
+    hiddenElements.classList.remove("hiddenElement")
   } else {
     alert("Please enter an appropriate user name")
 
@@ -258,12 +260,21 @@ let filteredData = [];
 let filteredDataTwo = [];
 let filteredDataThree = [];
 let filteredDataFour = [];
+let prevButtonsClicked = 0;
 
 
 // Create the "Filter" button and add an event listener to it
 const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button2.setAttribute("disabled", true);
+    button2.classList.add("greyed-out");
+    button3.setAttribute("disabled", true);
+    button3.classList.add("greyed-out");
+    button4.setAttribute("disabled", true);
+    button4.classList.add("greyed-out");
     button1.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "Europe";
@@ -273,6 +284,14 @@ button1.addEventListener("click", function() {
 const button2 = document.getElementById("button2");
 button2.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button1.setAttribute("disabled", true);
+    button1.classList.add("greyed-out");
+    button3.setAttribute("disabled", true);
+    button3.classList.add("greyed-out");
+    button4.setAttribute("disabled", true);
+    button4.classList.add("greyed-out");
     button2.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "North America";
@@ -282,6 +301,14 @@ button2.addEventListener("click", function() {
 const button3 = document.getElementById("button3");
 button3.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button2.setAttribute("disabled", true);
+    button2.classList.add("greyed-out");
+    button1.setAttribute("disabled", true);
+    button1.classList.add("greyed-out");
+    button4.setAttribute("disabled", true);
+    button4.classList.add("greyed-out");
     button3.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "Asia";
@@ -291,6 +318,14 @@ button3.addEventListener("click", function() {
 const button4 = document.getElementById("button4");
 button4.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button2.setAttribute("disabled", true);
+    button2.classList.add("greyed-out");
+    button3.setAttribute("disabled", true);
+    button3.classList.add("greyed-out");
+    button1.setAttribute("disabled", true);
+    button1.classList.add("greyed-out");
     button4.classList.add("green");
     filteredData = data.filter(function(item) {
         return item.Continent === "Africa";
@@ -300,6 +335,10 @@ button4.addEventListener("click", function() {
 const button5 = document.getElementById("button5");
 button5.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button6.setAttribute("disabled", true);
+    button6.classList.add("greyed-out");
     button5.classList.add("green");
     filteredDataTwo = filteredData.filter(function(item) {
         return item.Category === "active";
@@ -309,6 +348,10 @@ button5.addEventListener("click", function() {
 const button6 = document.getElementById("button6");
 button6.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button5.setAttribute("disabled", true);
+    button5.classList.add("greyed-out");
     button6.classList.add("green");
     filteredDataTwo = filteredData.filter(function(item) {
         return item.Category === "lazy";
@@ -318,6 +361,10 @@ button6.addEventListener("click", function() {
 const button7 = document.getElementById("button7");
 button7.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button9.setAttribute("disabled", true);
+    button9.classList.add("greyed-out");
     button7.classList.add("green");
     filteredDataThree = filteredDataTwo.filter(function(item) {
         return item.Temperature === "cold" || item.Temperature === "mild";
@@ -327,6 +374,10 @@ button7.addEventListener("click", function() {
 const button9 = document.getElementById("button9");
 button9.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button7.setAttribute("disabled", true);
+    button7.classList.add("greyed-out");
     button9.classList.add("green");
     filteredDataThree = filteredDataTwo.filter(function(item) {
         return item.Temperature === "warm";
@@ -336,6 +387,12 @@ button9.addEventListener("click", function() {
 const button10 = document.getElementById("button10");
 button10.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button11.setAttribute("disabled", true);
+    button11.classList.add("greyed-out");
+    button12.setAttribute("disabled", true);
+    button12.classList.add("greyed-out");
     button10.classList.add("green");
     filteredDataFour = filteredDataThree.filter(function(item) {
         return item.PPPN <= 70;
@@ -345,6 +402,12 @@ button10.addEventListener("click", function() {
 const button11 = document.getElementById("button11");
 button11.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button10.setAttribute("disabled", true);
+    button10.classList.add("greyed-out");
+    button12.setAttribute("disabled", true);
+    button12.classList.add("greyed-out");
     button11.classList.add("green");
     filteredDataFour = filteredDataThree.filter(function(item) {
         return item.PPPN > 71 && item.PPPN < 150;
@@ -354,6 +417,12 @@ button11.addEventListener("click", function() {
 const button12 = document.getElementById("button12");
 button12.addEventListener("click", function() {
     // Filter the data and store it in the "filteredData" variable
+    prevButtonsClicked++;
+    checkPrevButtons()
+    button10.setAttribute("disabled", true);
+    button10.classList.add("greyed-out");
+    button11.setAttribute("disabled", true);
+    button11.classList.add("greyed-out");
     button12.classList.add("green");
     filteredDataFour = filteredDataThree.filter(function(item) {
         return item.PPPN > 151;
@@ -366,9 +435,12 @@ button12.addEventListener("click", function() {
 
 
 // Create the "Display" button and add an event listener to it
+
+
+
 const button13 = document.getElementById("button13");
 button13.addEventListener("click", function() {
-    // Loop through the filtered data and display it
+    checkPrevButtons()
     button13.classList.add("green");
     let mergedArray =  [...filteredDataFour]  //[...new Set([...filteredData, ...filteredDataTwo, ...filteredDataThree, ...filteredDataFour])];
     if (mergedArray.length === 0){
@@ -405,6 +477,13 @@ button13.addEventListener("click", function() {
   // Set the inner HTML of the container to the generated HTML string
   container.innerHTML = htmlString;
 });
+
+function checkPrevButtons() {
+  if (prevButtonsClicked === 4) {
+    button13.removeAttribute("disabled");
+    button13.classList.remove("greyed-out");
+  }
+}
 
 // const button10 = document.getElementById("button10");
 // button10.addEventListener("click", function() {
